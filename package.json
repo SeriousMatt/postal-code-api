@@ -1,15 +1,18 @@
 {
   "name": "postal-code-api",
   "version": "1.0.0",
-  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "main": "index.js",
+  "description": "",
   "dependencies": {
+    "eslint": "^4.19.1",
     "express": "^4.16.3",
     "nodemon": "^1.17.3"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1"
   },
   "author": "",
   "license": "ISC"
