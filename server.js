@@ -1,7 +1,8 @@
 //Call libraries
-var express    = require('express');      
-var app        = express();                
-var bodyParser = require('body-parser');
+var express        = require('express');      
+var app            = express();                
+var bodyParser     = require('body-parser');
+var postgreData    = require('./postgre.js');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -10,7 +11,7 @@ var port = process.env.PORT || 8080;
 var router = express.Router();              
 //Add route
 router.get('/', function(req, res) {
-    res.json({ message: 'postal-code-api' });   
+    res.json({ postgreData });   
 });
 
 app.use('/api', router);
