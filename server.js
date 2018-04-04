@@ -20,7 +20,7 @@ app.get('/state/:code', function (req, res) {
   res.send(response);
 });
 //Listen on port 3000
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('Running on port 3000');
 });
 //Postgre query
