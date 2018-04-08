@@ -19,7 +19,7 @@ let getPostalCode = (req, res, next) => {
           message: 'bad query',
         });
     });
-}
+};
 // Request data by state
 let getStateCodes = (req, res, next) => {
   // Set default page
@@ -55,8 +55,8 @@ let getStateCodes = (req, res, next) => {
           status: 'error',
           message: 'bad query',
         });
-	});
-}
+    });
+};
 
 // Export query functions to routes
 module.exports = {
