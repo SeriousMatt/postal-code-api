@@ -22,6 +22,12 @@ Recommended to install the [PostgresApp](http://postgresapp.com/documentation/in
 npm install
 ```
 
+### Running
+
+```
+npm start
+```
+
 ### Creating data
 
 ```
