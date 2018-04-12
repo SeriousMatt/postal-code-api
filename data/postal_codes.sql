@@ -16,4 +16,4 @@ CREATE TABLE postal_codes(COUNTRY_CODE char(2),
  LONGITUDE numeric, 
  ACCURACY numeric);
 
-\copy postal_codes FROM '/Users/matthewreynolds/desktop/postal-code-api/data/US.csv' WITH CSV;
+\copy postal_codes FROM '/Users/matthewreynolds/desktop/Christian-Care-Project/postal-code-api/data/US.csv' WITH CSV;

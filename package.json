@@ -2,11 +2,11 @@
   "name": "postal-code-api",
   "version": "1.0.0",
   "scripts": {
-    "create-db":"cd data ; psql -f postal_codes.sql ; npm run-script push-db",
-    "connect-db":"heroku pg:psql",
+    "create-db": "cd data ; psql -f postal_codes.sql ; npm run-script push-db",
+    "connect-db": "heroku pg:psql",
     "deploy": "git push heroku master",
     "lint": "./node_modules/.bin/eslint  .",
-    "push-db":"heroku pg:push postal_codes postgresql-acute-70666 --app postal-code-api",
+    "push-db": "heroku pg:push postal_codes postgresql-acute-70666 --app postal-code-api",
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

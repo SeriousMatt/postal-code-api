@@ -2,7 +2,10 @@
 const db = require('../data/connection');
 // Request data by postal code
 let getPostalCode = (req, res, next) => {
-  db.any('SELECT * FROM postal_codes WHERE postal_code=' + req.params.code)
+  // Create object, prevent SQL injection
+  db.query('SELECT * FROM postal_codes WHERE postal_code=${userInput}', {
+    userInput: req.params.code,
+  })
     .then(function(data) {
       res.status(200)
         .json({
@@ -39,7 +42,11 @@ let getStateCodes = (req, res, next) => {
   }
   let offset = (page - 1) * limit;
   // Request data with offset and limit
-  db.any("SELECT * FROM postal_codes WHERE state_code='" + req.params.statecode + "' OFFSET " + offset + " LIMIT " + limit)
+  db.any("SELECT * FROM postal_codes WHERE state_code=${userInput} OFFSET ${offset} LIMIT ${limit}", {
+    userInput: req.params.statecode,
+    offset: offset,
+    limit: limit,
+  })
     .then(function(data) {
       res.status(200)
         .json({
